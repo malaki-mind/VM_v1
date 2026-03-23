@@ -14,10 +14,11 @@ I saw the depth of bash commands and how useful they could be,<br>
 but for the task of complex updates to a text file, this may<br>
 go over the intended scope of this project. I am curious about<br>
 writing a small program to update a csv that can be called in the<br>
-bash console to automate.<br>
+bash console to automate.
 <br>
-3-21-2026
-------
+
+# 3-21-2026
+
 - Created local git repo<br>
      * can't create GitHub repo via git bash<br>
         
