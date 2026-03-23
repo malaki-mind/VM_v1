@@ -4,7 +4,6 @@ Dev Log
 <br>
 - Testing bash script to log
 <br>
-<br>
 - Created local git repo<br>
     - can't create GitHub repo via git bash<br>
         - created GitHub repo manually<br>     
@@ -17,8 +16,10 @@ Dev Log
     - Will create separate .md reference file<br>
 <br>
 <b>Reflection</b>
+<br>
 My quest in building an environment for Virtual Machines<br> 
 has been a bit sidetracked by learning git and bash commands<br>
 which is a world all its own. I wanted to automate logging<br>
 as much as possible, utilizing bash scripts, which may take <br>
-some time. 
+some time.
+<br>
