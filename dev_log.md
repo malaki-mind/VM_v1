@@ -3,10 +3,10 @@ Dev Log
 3-22-2026
 ------
 - Researched bash commands<br>
-....* needed way to update text at specific points in file<br>
-....* learned about awk and sed (besides echo, printf)<br>
-....* files were not capturing text updates. step missing?<br>
-....* At this stage, manually update files/run simple script shall suffice<br>
+    * needed way to update text at specific points in file<br>
+    * learned about awk and sed (besides echo, printf)<br>
+    * files were not capturing text updates. step missing?<br>
+    * At this stage, manually update files/run simple script shall suffice<br>
 
 #### Reflection
 <br>
@@ -19,16 +19,16 @@ bash console to automate.<br>
 3-21-2026
 ------
 - Created local git repo<br>
-....* can't create GitHub repo via git bash<br>
+     * can't create GitHub repo via git bash<br>
         
 - Created GitHub repo manually<br>     
 
 - Linked local repo to GitHub<br>
-....* had issue linking repos because I missed crucial bash command<br>
-....* will include .md reference describing process<br>
+    * had issue linking repos because I missed crucial bash command<br>
+    * will include .md reference describing process<br>
 
 - Acquired host system information<br>
-....* will create separate .md reference file<br>
+    * will create separate .md reference file<br>
 
 #### Reflection
 <br>
