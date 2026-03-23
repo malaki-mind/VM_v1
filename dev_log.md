@@ -2,7 +2,7 @@ Dev Log
 -------
 <b>3-21-2026</b>
 
-<br><b>Created local git repo</b><br>
+<b>Created local git repo</b><br>
     - can't create GitHub repo via git bash<br>
         - created GitHub repo manually<br>     
 <br>
