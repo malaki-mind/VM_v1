@@ -1,5 +1,5 @@
 secret_txt.txt
-ignore/
 *.sh
+ignore/
 vm_log/
 
