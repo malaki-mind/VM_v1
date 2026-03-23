@@ -1,19 +1,36 @@
 Dev Log
--------
-<b>3-21-2026</b>
+======
+3-22-2026
+------
+- Researched bash commands<br>
+....* needed way to update text at specific points in file<br>
+....* learned about awk and sed (besides echo, printf)<br>
+....* files were not capturing text updates. step missing?<br>
+....* At this stage, manually update files/run simple script shall suffice<br>
 
-<b>Created local git repo</b><br>
-    - can't create GitHub repo via git bash<br>
-        - created GitHub repo manually<br>     
+#### Reflection
+<br>
+I saw the depth of bash commands and how useful they could be,<br>
+but for the task of complex updates to a text file, this may<br>
+go over the intended scope of this project. I am curious about<br>
+writing a small program to update a csv that can be called in the<br>
+bash console to automate.<br>
+<br>
+3-21-2026
+------
+- Created local git repo<br>
+....* can't create GitHub repo via git bash<br>
+        
+- Created GitHub repo manually<br>     
 
-<b>Linked local repo to GitHub</b><br>
-    - had issue linking repos because I missed crucial bash command<br>
-        - will include .md reference describing process<br>
+- Linked local repo to GitHub<br>
+....* had issue linking repos because I missed crucial bash command<br>
+....* will include .md reference describing process<br>
 
-<b>Acquired host system information</b><br>
-    - Will create separate .md reference file<br>
+- Acquired host system information<br>
+....* will create separate .md reference file<br>
 
-<h><b>Reflection</b></h>
+#### Reflection
 <br>
 My quest in building an environment for Virtual Machines<br> 
 has been a bit sidetracked by learning git and bash commands<br>
