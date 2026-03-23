@@ -1,21 +1,19 @@
 Dev Log
 -------
 <b>3-21-2026</b>
-<br>
-- Testing bash script to log
-<br>
-- Created local git repo<br>
+
+<br><b>Created local git repo</b><br>
     - can't create GitHub repo via git bash<br>
         - created GitHub repo manually<br>     
 <br>
-- Linked local repo to GitHub<br>
+<b>Linked local repo to GitHub</b><br>
     - had issue linking repos because I missed crucial bash command<br>
         - will include .md reference describing process<br>
 <br>
-- Acquired host system information<br>
+<b>Acquired host system information</b><br>
     - Will create separate .md reference file<br>
 <br>
-<b>Reflection</b>
+<h><b>Reflection</b></h>
 <br>
 My quest in building an environment for Virtual Machines<br> 
 has been a bit sidetracked by learning git and bash commands<br>
