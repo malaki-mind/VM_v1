@@ -9,7 +9,6 @@ Dev Log
     * At this stage, manually update files/run simple script shall suffice<br>
 
 #### Reflection
-<br>
 I saw the depth of bash commands and how useful they could be,<br>
 but for the task of complex updates to a text file, this may<br>
 go over the intended scope of this project. I am curious about<br>
@@ -32,7 +31,6 @@ bash console to automate.
     * will create separate .md reference file<br>
 
 #### Reflection
-<br>
 My quest in building an environment for Virtual Machines<br> 
 has been a bit sidetracked by learning git and bash commands<br>
 which is a world all its own. I wanted to automate logging<br>
