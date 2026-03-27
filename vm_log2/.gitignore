@@ -1,0 +1,6 @@
+vm_log2/
+x64/
+*.sln
+*.vcxproj
+*.vcxproj.filter
+*.vcxproj.user
