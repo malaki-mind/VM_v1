@@ -23,8 +23,9 @@ from the main git, the unneeded files still exist<br>
 in the commit history. This was an important lesson<br>
 in secure practices with the git, as I see the process<br>
 of removing files from the commit history is quite<br>
-the process. Thankfully nothing sensitive is posted<br>
-in
+the process. Thankfully nothing sensitive was leaked, just<br>
+taking on the extra precautions and building the paranoia<br>
+before committing anything to the git.
 
 ## 3-25-2026
 
