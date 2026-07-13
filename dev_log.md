@@ -1,6 +1,22 @@
 Dev Log
 ======
-## 3-26-2025
+## 7-12-2026
+- Revisiting project
+    * focused on other creative project for some time
+- Discovered bugs in VM Log application
+    * editing entries does not update the table
+    * need to push_back new entry and delete old
+    * need to capture row index to implement properly
+
+#### Reflection
+I've been working a bit on my music project which has been<br>
+eating up a lot of time, including the time taken from my<br>
+day job. I am looking to get back into this and finally get<br>
+a VM up and running. I want to start building applications and<br>
+web services that will tie into my creative projects, as well<br>
+as advancing my career into something a bit more suitable. <br>
+
+## 3-26-2026
 - Cleaned up and pushed VM Log application to git
     * cleared up input issues with getline() function
     * used cin.clear() and cin.ignore() to clean buffer
@@ -25,7 +41,7 @@ in secure practices with the git, as I see the process<br>
 of removing files from the commit history is quite<br>
 the process. Thankfully nothing sensitive was leaked, just<br>
 taking on the extra precautions and building the paranoia<br>
-before committing anything to the git.
+before committing anything to the git.<br>
 
 ## 3-25-2026
 
