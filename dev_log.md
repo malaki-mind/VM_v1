@@ -1,5 +1,30 @@
 Dev Log
 ======
+## 3-26-2025
+- Cleaned up and pushed VM Log application to git
+    * cleared up input issues with getline() function
+    * used cin.clear() and cin.ignore() to clean buffer
+
+- Pushed files not meant for the git
+    * learned valuable lesson in secure commits and pushes
+    * nothing sensitive leaked but made git messy
+
+#### Reflection
+It's good I went back and cleaned up the cin bugs<br>
+and was reminded of cin.clear() and cin.ignore<br>
+as well as better practices in inputting data<br>
+utilizing getline(). It took just a little<br>
+research to be reminded of these basic functions.<br>
+I did make a mistake of pushing .filters and .exe<br>
+files to the git after making naming mistakes and<br>
+a misunderstanding of what should be uploaded to<br>
+a remote git. Although I was able to remove the files<br>
+from the main git, the unneeded files still exist<br>
+in the commit history. This was an important lesson<br>
+in secure practices with the git, as I see the process<br>
+of removing files from the commit history is quite<br>
+the process. Thankfully nothing sensitive is posted<br>
+in
 
 ## 3-25-2026
 
