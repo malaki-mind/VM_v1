@@ -1,5 +1,13 @@
 Dev Log
 ======
+## 7-17-2026
+- Created better flow for vm_log2 program 
+    * updated row selection functions
+    * need to implement better type checking
+
+#### Reflection
+slowly chipping away in periods where I can try out an idea.<br>
+
 ## 7-12-2026
 - Revisiting project
     * focused on other creative project for some time
