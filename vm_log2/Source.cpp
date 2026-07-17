@@ -156,6 +156,8 @@ void build_table(int size, const char* c_arr, vector<vector<string>>& table, int
 			//cout << str << '\n';
 		}
 	}
+
+	cout << row;
 }
 
 void display_table(vector <vector<string>>table)
@@ -171,20 +173,18 @@ void display_table(vector <vector<string>>table)
 	
 }
 
-void split_row(vector<string>& entry, vector<vector<string>>table, int row)
+int select_row(int total_rows)
 {
 	int invalid = -1;
 	int user_input = invalid;
-	int index = row - 1;
+	int last_row = total_rows - 1;
 
-	entry.clear();
-
-	do 
+	do
 	{
 		cout << "\nChoose row: ";
 		cin >> user_input;
 
-		if (user_input > index)
+		if (user_input > last_row)
 		{
 			cout << "\nInvalid row\n";
 			user_input = invalid;
@@ -194,14 +194,20 @@ void split_row(vector<string>& entry, vector<vector<string>>table, int row)
 			cout << "\ncan't edit header\n";
 			user_input = invalid;
 		}
-		else 
-		{
-			for (int i = 0; i < TOTAL_COLS; i++)
-			{
-				entry.push_back(table[index][i]);
-			}
-		}
 	} while (user_input == invalid);
+	
+	return user_input;
+}
+
+void build_entry(vector<string>& entry, vector<vector<string>>table, int row)
+{
+	entry.clear();
+		for (int i = 0; i < TOTAL_COLS; i++)
+		{
+			entry.push_back(table[row][i]);
+		}
+	
+	
 }
 
 void remove_comma(string &str)
@@ -216,6 +222,10 @@ void remove_comma(string &str)
 	// source: https://stackoverflow.com/questions/19138983/c-remove-punctuation-from-string
 }
 
+void delete_entry(vector<vector<string>>& table, int row)
+{
+	table.erase(table.begin() + row);
+}
 
 void edit_data(vector<string>& entry, int index)
 {
@@ -254,9 +264,10 @@ void edit_data(vector<string>& entry, int index)
 	} while (user_char == N);
 }
 
-void edit_entry(vector<string>& entry)
+void edit_entry(vector<string>& entry, vector<vector<string>>& table)
 {
 	int user_input = -1;
+	int user_sel = -1;
 	string new_entry;
 	int invalid_num = -1;
 	const int quit = 11;
@@ -290,6 +301,12 @@ void edit_entry(vector<string>& entry)
 			cin >> user_input;
 		}
 
+		/*
+		if (user_input != quit || user_input != invalid_num)
+		{
+			user_sel = user_input;
+		}
+		*/
 		switch (user_input)
 		{
 		case(ID):
@@ -325,10 +342,13 @@ void edit_entry(vector<string>& entry)
 			user_input = invalid_num;
 		}
 
+		//table.push_back(entry);
+		//delete_entry(table, user_sel);
+
 	} while (user_input == invalid_num || user_input != quit);
 }
 
-vector<string> add_entry()
+vector<string> add_entry(vector<vector<string>>& table)
 {
 	string user_input;
 	char user_char;
@@ -367,7 +387,7 @@ vector<string> add_entry()
 		case(Y):
 			break;
 		case(N):
-			edit_entry(entry);
+			edit_entry(entry, table);
 			break;
 		default:			
 			user_char = INVALID;
@@ -380,6 +400,8 @@ vector<string> add_entry()
 	} while (user_char == INVALID);
 	return entry;
 }
+
+
 
 char menu()
 {
@@ -475,7 +497,7 @@ int main()
 	// doc to read from
 	ifstream read_log;
 	// main vm_log to initalize from
-	ifstream parent_doc("../vm_log.csv");
+	ifstream parent_doc("vm_log.csv");
 	// string that will read a line (string) of a file
 	string line;
 	// char array that will break down a line into its chars
@@ -549,12 +571,12 @@ int main()
 				display_table(vm_log);
 				break;
 			case (add):
-				vm_log.push_back(add_entry());
+				vm_log.push_back(add_entry(vm_log));
 				row++;
 				break;
 			case (edit):
-				split_row(entry, vm_log, row);
-				edit_entry(entry);
+				build_entry(entry, vm_log, select_row(row));
+				edit_entry(entry, vm_log);
 				break;
 			case (write):
 				cout << "writing..." << endl;
@@ -608,6 +630,10 @@ int main()
 					if (letter == Y)
 					{
 						system("copy_log.sh");
+						break;
+					}
+					else if (letter == N)
+					{
 						break;
 					}
 				} while (letter != INVALID);
