@@ -1,5 +1,14 @@
 Dev Log
 ======
+## 7-18-2026
+- Completed edit feature for vm_log2 program
+    * now user can write/edit vm log fields
+    * able to use directly in command line
+    * save and quit updates git
+
+### Reflection
+sometimes the simplest ideas can take a complicated path in C++<br>
+
 ## 7-17-2026
 - Created better flow for vm_log2 program 
     * updated row selection functions
