@@ -1,2 +1,3 @@
 ID,Alias,Host ID,OS,Mem Total,Mem Free,Disk_Total,Disk Free,vHost?
-1,1,1,1,1,1,1,1,1
+1,0,0,0,0,0,0,0,0
+a,a,b,a,a,a,a,a,a

@@ -44,7 +44,7 @@ const char INVALID = 'I';
 
 void clear_stream() 
 {
-	cin.ignore(10000, '\n');
+	cin.ignore(numeric_limits<streamsize>::max(), '\n');
 	cin.clear();
 }
 
@@ -178,9 +178,11 @@ int select_row(int total_rows)
 	int invalid = -1;
 	int user_input = invalid;
 	int last_row = total_rows - 1;
+	int ref = 0;
 
 	do
 	{
+		clear_stream();
 		cout << "\nChoose row: ";
 		cin >> user_input;
 
@@ -188,11 +190,13 @@ int select_row(int total_rows)
 		{
 			cout << "\nInvalid row\n";
 			user_input = invalid;
+			clear_stream();
 		}
 		else if (user_input == 0)
 		{
 			cout << "\ncan't edit header\n";
 			user_input = invalid;
+			clear_stream();
 		}
 	} while (user_input == invalid);
 	
@@ -205,9 +209,7 @@ void build_entry(vector<string>& entry, vector<vector<string>>table, int row)
 		for (int i = 0; i < TOTAL_COLS; i++)
 		{
 			entry.push_back(table[row][i]);
-		}
-	
-	
+		}	
 }
 
 void remove_comma(string &str)
@@ -504,6 +506,7 @@ int main()
 	const char* data;
 	// tracking row count to use as an index
 	int row = 0;
+	int row_to_edit = 0;
 	// does the parent doc exist?
 	bool parent_good = parent_doc.good();
 	// menu choices
@@ -575,8 +578,11 @@ int main()
 				row++;
 				break;
 			case (edit):
-				build_entry(entry, vm_log, select_row(row));
+				row_to_edit = select_row(row);
+				build_entry(entry, vm_log, row_to_edit);
 				edit_entry(entry, vm_log);
+				delete_entry(vm_log, row_to_edit);
+				vm_log.push_back(entry);
 				break;
 			case (write):
 				cout << "writing..." << endl;
